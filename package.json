@@ -1,20 +1,19 @@
 {
   "name": "aruba-admin",
-  "version": "0.0.1",
-  "main": "dist/lib/ArubaAdmin.js",
+  "version": "0.1.0",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
   "type": "commonjs",
+  "description": "A TypeScript/Node.js library for interacting with Aruba Cloud's SOAP API with full type support and multi-region connectivity.",
   "scripts": {
-    "start": "ts-node lib/index.ts",
     "build": "tsc",
+    "postbuild": "\\cp -f ./generatedSoapApi/*.wsdl ./dist/generatedSoapApi/",
+    "clean": "rm -rf dist",
+    "rebuild": "npm run clean && npm run build",
     "generateSoapApi": "ts-node lib/utils/SoapClientBuilder.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublishOnly": "npm run build"
   },
   "author": "Roman A. Nosov (github: myLittleCrab)",
-  "description": "",
-  "devDependencies": {
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
-  },
   "keywords": [
     "aruba",
     "aruba admin",
@@ -31,10 +30,27 @@
   ],
   "readmeFilename": "README.md",
   "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myLittleCrab/aruba-admin.git"
+  },
+  "homepage": "https://github.com/myLittleCrab/aruba-admin#readme",
+  "bugs": {
+    "url": "https://github.com/myLittleCrab/aruba-admin/issues"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "soap": "^1.2.1",
     "wsdl-tsclient": "^1.7.1",
     "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   },
   "engines": {
     "node": ">=12"

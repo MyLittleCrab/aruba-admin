@@ -1,7 +1,12 @@
+import path from 'path';
+
 export type DataCenter = {
     url: string;
     name: string;
 };
+
+// Get the directory of this constants file to build absolute paths
+const LIBRARY_ROOT = path.resolve(__dirname, '..');
 
 export default {
     DATA_CENTERS: {
@@ -43,9 +48,9 @@ export default {
         } as DataCenter,
     },
 
-    WSDL_LOCATION: "./generatedSoapApi/Arubacloud.svc.wsdl",
-    BROKEN_NAMESPACE: "https://api.computing.cloud.it/WsEndUser/json",
-    FIXED_NAMESPACE: "https://api.computing.cloud.it/WsEndUser",
-    GENERATED_SOAP_API_DIR: "./generatedSoapApi",
-    GENERATED_SOAP_API_FILE: "./generatedSoapApi/Arubacloud.svc.ts"
+    // Use absolute paths relative to the library installation
+    WSDL_LOCATION: path.join(LIBRARY_ROOT, "generatedSoapApi", "Arubacloud.svc.wsdl"),
+    GENERATED_SOAP_API_DIR: path.join(LIBRARY_ROOT, "generatedSoapApi"),
+    GENERATED_SOAP_API_FILE: path.join(LIBRARY_ROOT, "generatedSoapApi", "Arubacloud.svc.ts"),
+    BROKEN_NAMESPACE: "https://api.computing.cloud.it/WsEndUser/json"
 };

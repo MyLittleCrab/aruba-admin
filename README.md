@@ -243,8 +243,8 @@ This is an unofficial library for Aruba Cloud API. It is not affiliated with or 
 ## Support
 
 - 📚 [Aruba Cloud Documentation](https://www.cloud.it/en/support-community/)
-- 🐛 [Report Issues](https://github.com/myLittleCrab/arubaupdater/issues)
-- 💬 [Discussions](https://github.com/myLittleCrab/arubaupdater/discussions)
+- 🐛 [Report Issues](https://github.com/myLittleCrab/aruba-admin/issues)
+- 💬 [Discussions](https://github.com/myLittleCrab/aruba-admin/discussions)
 
 ---
 

@@ -1,21 +1,36 @@
 
 import xmlConverter from "xml-js";
 import fs from "fs/promises"
+import path from "path";
 import constants, { DataCenter } from "../constants";
 
 import { parseAndGenerate } from "wsdl-tsclient";
+
 /**
- * Downloads the WSDL file for the specified data center and saves it to the generated SOAP API directory.
- * It also updates the namespaces in the WSDL to fix any broken references. 
+ * Downloads the WSDL file for the specified data center and returns the path to it.
+ * First tries to use pre-packaged WSDL files, only downloads if not found.
  * @param dc Data center object containing URL and name
- * @return Promise<string> The path to the saved WSDL file
- * @throws Error if the WSDL download fails or if there is an issue writing the file
+ * @return Promise<string> The path to the WSDL file
+ * @throws Error if the WSDL download fails or if there is an issue accessing the file
  */
 export const downloadWSDL = async (dc: DataCenter): Promise<string> => {
     if (!dc || !dc.url || !dc.name) {
         throw new Error("Invalid data center object. It must contain 'url' and 'name' properties.");
     }
 
+    // Check if pre-packaged WSDL file exists
+    const prePackagedPath = path.join(constants.GENERATED_SOAP_API_DIR, `${dc.name}.wsdl`);
+    
+    try {
+        await fs.access(prePackagedPath);
+        // File exists, return the path
+        return prePackagedPath;
+    } catch (error) {
+        // File doesn't exist, need to download it
+        console.log(`WSDL file for ${dc.name} not found locally, downloading...`);
+    }
+
+    // Download and process WSDL
     const res = await fetch(dc.url);
     if (!res.ok) {
         throw new Error(`Failed to download WSDL from ${dc.url}: ${res.statusText}`);
@@ -40,10 +55,17 @@ export const downloadWSDL = async (dc: DataCenter): Promise<string> => {
     })
 
     const newWsdlContent = xmlConverter.js2xml(jsonObj, { compact: false, spaces: 2 });
-    const path = `${constants.GENERATED_SOAP_API_DIR}/${dc.name}.wsdl`;
-    await fs.writeFile(path, newWsdlContent);
+    
+    // Ensure directory exists before writing
+    try {
+        await fs.mkdir(constants.GENERATED_SOAP_API_DIR, { recursive: true });
+    } catch (error) {
+        // Directory might already exist, ignore error
+    }
+    
+    await fs.writeFile(prePackagedPath, newWsdlContent);
 
-    return path;
+    return prePackagedPath;
 }
 
 /**
@@ -64,7 +86,7 @@ export const generateTypescriptApi = async (): Promise<void> => {
         }
     }
     
-    await fs.mkdir(constants.GENERATED_SOAP_API_DIR);
+    await fs.mkdir(constants.GENERATED_SOAP_API_DIR, { recursive: true });
 
     await downloadWSDL(constants.DATA_CENTERS.DEFAULT);
 
