@@ -1,6 +1,7 @@
+import { GetScheduledOperationsResult } from "./GetScheduledOperationsResult";
 
 /** GetScheduledOperationsResponse */
 export interface GetScheduledOperationsResponse {
-    /** StreamBody|xs:base64Binary */
-    GetScheduledOperationsResult?: string;
+    /** GetScheduledOperationsResult */
+    GetScheduledOperationsResult?: GetScheduledOperationsResult;
 }

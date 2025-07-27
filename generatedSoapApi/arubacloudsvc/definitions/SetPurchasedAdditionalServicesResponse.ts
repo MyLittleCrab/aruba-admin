@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetPurchasedAdditionalServicesResponse */
 export interface SetPurchasedAdditionalServicesResponse {
-    /** StreamBody|xs:base64Binary */
-    SetPurchasedAdditionalServicesResult?: string;
+    /** SetPurchasedAdditionalServicesResult */
+    SetPurchasedAdditionalServicesResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

@@ -1,6 +1,7 @@
+import { GetCustomVirtualDisksResult } from "./GetCustomVirtualDisksResult";
 
 /** GetCustomVirtualDisksResponse */
 export interface GetCustomVirtualDisksResponse {
-    /** StreamBody|xs:base64Binary */
-    GetCustomVirtualDisksResult?: string;
+    /** GetCustomVirtualDisksResult */
+    GetCustomVirtualDisksResult?: GetCustomVirtualDisksResult;
 }

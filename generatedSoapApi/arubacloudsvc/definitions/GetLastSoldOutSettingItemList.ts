@@ -1,0 +1,4 @@
+
+/** GetLastSoldOutSettingItemList */
+export interface GetLastSoldOutSettingItemList {
+}

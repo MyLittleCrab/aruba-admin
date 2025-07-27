@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetEnqueueAssociateVLanResponse */
 export interface SetEnqueueAssociateVLanResponse {
-    /** StreamBody|xs:base64Binary */
-    SetEnqueueAssociateVLanResult?: string;
+    /** SetEnqueueAssociateVLanResult */
+    SetEnqueueAssociateVLanResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

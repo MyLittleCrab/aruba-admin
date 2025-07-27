@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetEnqueueLoadBalancerStartResponse */
 export interface SetEnqueueLoadBalancerStartResponse {
-    /** StreamBody|xs:base64Binary */
-    SetEnqueueLoadBalancerStartResult?: string;
+    /** SetEnqueueLoadBalancerStartResult */
+    SetEnqueueLoadBalancerStartResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

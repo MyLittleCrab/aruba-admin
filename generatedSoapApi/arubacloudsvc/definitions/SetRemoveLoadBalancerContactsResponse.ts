@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetRemoveLoadBalancerContactsResponse */
 export interface SetRemoveLoadBalancerContactsResponse {
-    /** StreamBody|xs:base64Binary */
-    SetRemoveLoadBalancerContactsResult?: string;
+    /** SetRemoveLoadBalancerContactsResult */
+    SetRemoveLoadBalancerContactsResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

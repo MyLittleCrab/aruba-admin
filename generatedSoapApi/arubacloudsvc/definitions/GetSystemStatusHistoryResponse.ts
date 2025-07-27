@@ -1,6 +1,7 @@
+import { GetSystemStatusHistoryResult } from "./GetSystemStatusHistoryResult";
 
 /** GetSystemStatusHistoryResponse */
 export interface GetSystemStatusHistoryResponse {
-    /** StreamBody|xs:base64Binary */
-    GetSystemStatusHistoryResult?: string;
+    /** GetSystemStatusHistoryResult */
+    GetSystemStatusHistoryResult?: GetSystemStatusHistoryResult;
 }

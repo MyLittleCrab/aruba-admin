@@ -1,14 +1,8 @@
 
 /** SetAssistanceQuotationAcceptance */
 export interface SetAssistanceQuotationAcceptance {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    quotationID?: string;
-    /** xs:string */
+    /** xs:int */
+    quotationID?: number;
+    /** AssistanceRequestQuotationAcceptanceStatus|xs:string|Accepted,Refused */
     status?: string;
 }

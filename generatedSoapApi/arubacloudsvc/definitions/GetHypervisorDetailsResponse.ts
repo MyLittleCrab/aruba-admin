@@ -1,6 +1,7 @@
+import { GetHypervisorDetailsResult } from "./GetHypervisorDetailsResult";
 
 /** GetHypervisorDetailsResponse */
 export interface GetHypervisorDetailsResponse {
-    /** StreamBody|xs:base64Binary */
-    GetHypervisorDetailsResult?: string;
+    /** GetHypervisorDetailsResult */
+    GetHypervisorDetailsResult?: GetHypervisorDetailsResult;
 }

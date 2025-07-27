@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetEnqueueDeassociateIpAddressResponse */
 export interface SetEnqueueDeassociateIpAddressResponse {
-    /** StreamBody|xs:base64Binary */
-    SetEnqueueDeassociateIpAddressResult?: string;
+    /** SetEnqueueDeassociateIpAddressResult */
+    SetEnqueueDeassociateIpAddressResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

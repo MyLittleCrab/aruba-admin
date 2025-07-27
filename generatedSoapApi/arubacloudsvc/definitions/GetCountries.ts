@@ -1,0 +1,4 @@
+
+/** GetCountries */
+export interface GetCountries {
+}

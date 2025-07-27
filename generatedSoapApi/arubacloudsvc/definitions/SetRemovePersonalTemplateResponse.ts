@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetRemovePersonalTemplateResponse */
 export interface SetRemovePersonalTemplateResponse {
-    /** StreamBody|xs:base64Binary */
-    SetRemovePersonalTemplateResult?: string;
+    /** SetRemovePersonalTemplateResult */
+    SetRemovePersonalTemplateResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

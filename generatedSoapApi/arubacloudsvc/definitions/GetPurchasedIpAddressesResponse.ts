@@ -1,6 +1,7 @@
+import { GetPurchasedIpAddressesResult } from "./GetPurchasedIpAddressesResult";
 
 /** GetPurchasedIpAddressesResponse */
 export interface GetPurchasedIpAddressesResponse {
-    /** StreamBody|xs:base64Binary */
-    GetPurchasedIpAddressesResult?: string;
+    /** GetPurchasedIpAddressesResult */
+    GetPurchasedIpAddressesResult?: GetPurchasedIpAddressesResult;
 }

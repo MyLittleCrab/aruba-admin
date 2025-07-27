@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetRenameVLanResponse */
 export interface SetRenameVLanResponse {
-    /** StreamBody|xs:base64Binary */
-    SetRenameVLanResult?: string;
+    /** SetRenameVLanResult */
+    SetRenameVLanResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

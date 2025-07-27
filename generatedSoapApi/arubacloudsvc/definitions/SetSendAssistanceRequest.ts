@@ -1,12 +1,7 @@
+import { Request41 } from "./Request41";
 
 /** SetSendAssistanceRequest */
 export interface SetSendAssistanceRequest {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    requestID?: string;
+    /** request */
+    request?: Request41;
 }

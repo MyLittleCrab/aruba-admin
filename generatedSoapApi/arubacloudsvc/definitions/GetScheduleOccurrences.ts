@@ -1,14 +1,7 @@
+import { OperationRequest18 } from "./OperationRequest18";
 
 /** GetScheduleOccurrences */
 export interface GetScheduleOccurrences {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    scheduleStartDate?: string;
-    /** xs:string */
-    scheduleEndDate?: string;
+    /** operationRequest */
+    operationRequest?: OperationRequest18;
 }

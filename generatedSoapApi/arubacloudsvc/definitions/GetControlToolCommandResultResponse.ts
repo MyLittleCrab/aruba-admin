@@ -1,6 +1,7 @@
+import { GetRemoteAccessUrlResult } from "./GetRemoteAccessUrlResult";
 
 /** GetControlToolCommandResultResponse */
 export interface GetControlToolCommandResultResponse {
-    /** StreamBody|xs:base64Binary */
-    GetControlToolCommandResultResult?: string;
+    /** GetControlToolCommandResultResult */
+    GetControlToolCommandResultResult?: GetRemoteAccessUrlResult;
 }

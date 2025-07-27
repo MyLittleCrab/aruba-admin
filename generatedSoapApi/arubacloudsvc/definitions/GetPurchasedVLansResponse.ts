@@ -1,6 +1,7 @@
+import { GetPurchasedVLansResult } from "./GetPurchasedVLansResult";
 
 /** GetPurchasedVLansResponse */
 export interface GetPurchasedVLansResponse {
-    /** StreamBody|xs:base64Binary */
-    GetPurchasedVLansResult?: string;
+    /** GetPurchasedVLansResult */
+    GetPurchasedVLansResult?: GetPurchasedVLansResult;
 }

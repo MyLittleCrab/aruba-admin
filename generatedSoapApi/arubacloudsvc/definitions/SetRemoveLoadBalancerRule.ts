@@ -1,12 +1,7 @@
+import { Request8 } from "./Request8";
 
 /** SetRemoveLoadBalancerRule */
 export interface SetRemoveLoadBalancerRule {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    loadBalancerRuleID?: string;
+    /** request */
+    request?: Request8;
 }

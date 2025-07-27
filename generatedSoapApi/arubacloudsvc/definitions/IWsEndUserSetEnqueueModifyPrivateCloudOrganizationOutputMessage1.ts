@@ -1,4 +1,0 @@
-
-/** IWsEndUser_SetEnqueueModifyPrivateCloudOrganization_OutputMessage */
-export interface IWsEndUserSetEnqueueModifyPrivateCloudOrganizationOutputMessage1 {
-}

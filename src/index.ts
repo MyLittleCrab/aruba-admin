@@ -4,14 +4,13 @@ dotenv.config();
 import { createClientAsync as ArubaClient } from "../generatedSoapApi/arubacloudsvc";
 import { WSSecurity } from "soap";
 import path from "path";
+import constants from "./constants";
 
 const username = process.env.ARUBA_USERNAME || "your_username";
 const password = process.env.ARUBA_PASSWORD || "your_password";
 
 (async () => {
-    const client = await ArubaClient(path.resolve("./generatedSoapApi/Arubacloud.svc.wsdl"), {
-
-    });
+    const client = await ArubaClient(path.resolve(constants.WSDL_LOCATION));
 
     client.setSecurity(new WSSecurity(username, password, {
         hasTimeStamp: true,
@@ -19,24 +18,14 @@ const password = process.env.ARUBA_PASSWORD || "your_password";
         passwordType: "PasswordText"
     }));
 
-    // const servers = await client.GetServersAsync({});
+    const context = await client.GetServersListAsync({ operationRequest: { LightData: true } });
+    const result = context[0];
 
-    // const token = await client.GetUserAuthenticationTokenAsync({
-    //     username,
-    //     password,
-    //     jsonp: "jsonpCallback",
-    //     otpValue: undefined // Optional, can be undefined if not using OTP
-    // });
+    // console.log(result);
 
-const binding = client.wsdl.definitions.bindings;
-console.log(Object.keys(binding)); // покажет все bindings
+    if (result.GetServersListResult && result.GetServersListResult.Success) {
+        console.log("GetServersAsync result:", result.GetServersListResult.Value);
+    } 
 
-for (const [bindingName, bindingDef] of Object.entries(binding)) {
-  console.log(`Binding: ${bindingName}`);
-  console.log('Input', bindingDef.methods?.GetUserAuthenticationToken?.input);
-}
-
-
-    // console.log(client.describe());
 
 })().catch(console.error);

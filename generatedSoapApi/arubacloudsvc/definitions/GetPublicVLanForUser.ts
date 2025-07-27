@@ -1,0 +1,4 @@
+
+/** GetPublicVLanForUser */
+export interface GetPublicVLanForUser {
+}

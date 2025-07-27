@@ -1,0 +1,4 @@
+
+/** GetPrivateCloudNamingBlacklists */
+export interface GetPrivateCloudNamingBlacklists {
+}

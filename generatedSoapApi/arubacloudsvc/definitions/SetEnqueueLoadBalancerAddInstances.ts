@@ -1,14 +1,7 @@
+import { Request5 } from "./Request5";
 
 /** SetEnqueueLoadBalancerAddInstances */
 export interface SetEnqueueLoadBalancerAddInstances {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    loadBalancerID?: string;
-    /** xs:string */
-    ips?: string;
+    /** request */
+    request?: Request5;
 }

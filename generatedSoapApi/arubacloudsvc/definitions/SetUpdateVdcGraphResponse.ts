@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetUpdateVDCGraphResponse */
 export interface SetUpdateVdcGraphResponse {
-    /** StreamBody|xs:base64Binary */
-    SetUpdateVDCGraphResult?: string;
+    /** SetUpdateVDCGraphResult */
+    SetUpdateVDCGraphResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

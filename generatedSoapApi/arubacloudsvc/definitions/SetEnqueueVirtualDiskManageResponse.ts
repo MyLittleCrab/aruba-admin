@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetEnqueueVirtualDiskManageResponse */
 export interface SetEnqueueVirtualDiskManageResponse {
-    /** StreamBody|xs:base64Binary */
-    SetEnqueueVirtualDiskManageResult?: string;
+    /** SetEnqueueVirtualDiskManageResult */
+    SetEnqueueVirtualDiskManageResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

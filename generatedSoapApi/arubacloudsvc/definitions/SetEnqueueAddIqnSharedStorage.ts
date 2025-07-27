@@ -1,14 +1,7 @@
+import { OperationRequest14 } from "./OperationRequest14";
 
 /** SetEnqueueAddIQNSharedStorage */
 export interface SetEnqueueAddIqnSharedStorage {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:int */
-    sharedStorageID?: number;
-    /** xs:string */
-    sharedStorageIQNs?: string;
+    /** operationRequest */
+    operationRequest?: OperationRequest14;
 }

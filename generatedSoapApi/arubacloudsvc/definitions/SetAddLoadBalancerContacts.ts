@@ -1,14 +1,7 @@
+import { Request3 } from "./Request3";
 
 /** SetAddLoadBalancerContacts */
 export interface SetAddLoadBalancerContacts {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:int */
-    loadBalancerID?: number;
-    /** xs:string */
-    notificationContacts?: string;
+    /** request */
+    request?: Request3;
 }

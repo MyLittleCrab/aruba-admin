@@ -1,6 +1,7 @@
+import { GetPriceListResult } from "./GetPriceListResult";
 
 /** GetPriceListResponse */
 export interface GetPriceListResponse {
-    /** StreamBody|xs:base64Binary */
-    GetPriceListResult?: string;
+    /** GetPriceListResult */
+    GetPriceListResult?: GetPriceListResult;
 }

@@ -1,18 +1,7 @@
+import { OperationRequest8 } from "./OperationRequest8";
 
 /** SetAddServerScheduledOperation */
 export interface SetAddServerScheduledOperation {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:int */
-    serverId?: number;
-    /** xs:string */
-    operationType?: string;
-    /** xs:string */
-    operationsParameters?: string;
-    /** xs:string */
-    newSchedulePlan?: string;
+    /** operationRequest */
+    operationRequest?: OperationRequest8;
 }

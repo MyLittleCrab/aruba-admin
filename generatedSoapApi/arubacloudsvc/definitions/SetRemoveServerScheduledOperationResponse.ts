@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetRemoveServerScheduledOperationResponse */
 export interface SetRemoveServerScheduledOperationResponse {
-    /** StreamBody|xs:base64Binary */
-    SetRemoveServerScheduledOperationResult?: string;
+    /** SetRemoveServerScheduledOperationResult */
+    SetRemoveServerScheduledOperationResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetRenameSharedStorageResponse */
 export interface SetRenameSharedStorageResponse {
-    /** StreamBody|xs:base64Binary */
-    SetRenameSharedStorageResult?: string;
+    /** SetRenameSharedStorageResult */
+    SetRenameSharedStorageResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

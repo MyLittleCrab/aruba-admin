@@ -1,12 +1,7 @@
+import { Request10 } from "./Request10";
 
 /** GetPreConfiguredPackages */
 export interface GetPreConfiguredPackages {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    hypervisorType?: string;
+    /** request */
+    request?: Request10;
 }

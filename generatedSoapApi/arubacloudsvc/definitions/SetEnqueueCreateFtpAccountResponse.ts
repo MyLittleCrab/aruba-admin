@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetEnqueueCreateFTPAccountResponse */
 export interface SetEnqueueCreateFtpAccountResponse {
-    /** StreamBody|xs:base64Binary */
-    SetEnqueueCreateFTPAccountResult?: string;
+    /** SetEnqueueCreateFTPAccountResult */
+    SetEnqueueCreateFTPAccountResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

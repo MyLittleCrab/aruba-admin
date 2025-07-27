@@ -1,14 +1,7 @@
+import { OperationRequest16 } from "./OperationRequest16";
 
 /** SetRenameSharedStorage */
 export interface SetRenameSharedStorage {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    sharedStorageID?: string;
-    /** xs:string */
-    sharedStorageName?: string;
+    /** operationRequest */
+    operationRequest?: OperationRequest16;
 }

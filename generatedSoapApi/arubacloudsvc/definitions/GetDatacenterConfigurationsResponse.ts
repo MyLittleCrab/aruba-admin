@@ -1,6 +1,7 @@
+import { GetDatacenterConfigurationsResult } from "./GetDatacenterConfigurationsResult";
 
 /** GetDatacenterConfigurationsResponse */
 export interface GetDatacenterConfigurationsResponse {
-    /** StreamBody|xs:base64Binary */
-    GetDatacenterConfigurationsResult?: string;
+    /** GetDatacenterConfigurationsResult */
+    GetDatacenterConfigurationsResult?: GetDatacenterConfigurationsResult;
 }

@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetEnqueueSetReverseDnsResponse */
 export interface SetEnqueueSetReverseDnsResponse {
-    /** StreamBody|xs:base64Binary */
-    SetEnqueueSetReverseDnsResult?: string;
+    /** SetEnqueueSetReverseDnsResult */
+    SetEnqueueSetReverseDnsResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

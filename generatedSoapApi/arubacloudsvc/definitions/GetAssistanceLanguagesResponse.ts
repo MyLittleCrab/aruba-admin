@@ -1,6 +1,7 @@
+import { GetAssistanceLanguagesResult } from "./GetAssistanceLanguagesResult";
 
 /** GetAssistanceLanguagesResponse */
 export interface GetAssistanceLanguagesResponse {
-    /** StreamBody|xs:base64Binary */
-    GetAssistanceLanguagesResult?: string;
+    /** GetAssistanceLanguagesResult */
+    GetAssistanceLanguagesResult?: GetAssistanceLanguagesResult;
 }

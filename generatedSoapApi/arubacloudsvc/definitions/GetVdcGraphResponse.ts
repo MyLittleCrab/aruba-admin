@@ -1,6 +1,7 @@
+import { GetRemoteAccessUrlResult } from "./GetRemoteAccessUrlResult";
 
 /** GetVDCGraphResponse */
 export interface GetVdcGraphResponse {
-    /** StreamBody|xs:base64Binary */
-    GetVDCGraphResult?: string;
+    /** GetVDCGraphResult */
+    GetVDCGraphResult?: GetRemoteAccessUrlResult;
 }

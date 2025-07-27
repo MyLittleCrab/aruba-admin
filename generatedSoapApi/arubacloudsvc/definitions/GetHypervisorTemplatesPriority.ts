@@ -1,0 +1,4 @@
+
+/** GetHypervisorTemplatesPriority */
+export interface GetHypervisorTemplatesPriority {
+}

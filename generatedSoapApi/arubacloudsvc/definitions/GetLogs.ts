@@ -1,16 +1,10 @@
 
 /** GetLogs */
 export interface GetLogs {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    dateFrom?: string;
-    /** xs:string */
-    dateTo?: string;
-    /** xs:string */
-    serverId?: string;
+    /** xs:int */
+    serverId?: number;
+    /** xs:dateTime */
+    from?: Date;
+    /** xs:dateTime */
+    to?: Date;
 }

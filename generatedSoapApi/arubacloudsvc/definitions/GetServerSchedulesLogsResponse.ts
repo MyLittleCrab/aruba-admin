@@ -1,6 +1,7 @@
+import { GetServerSchedulesLogsResult } from "./GetServerSchedulesLogsResult";
 
 /** GetServerSchedulesLogsResponse */
 export interface GetServerSchedulesLogsResponse {
-    /** StreamBody|xs:base64Binary */
-    GetServerSchedulesLogsResult?: string;
+    /** GetServerSchedulesLogsResult */
+    GetServerSchedulesLogsResult?: GetServerSchedulesLogsResult;
 }

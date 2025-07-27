@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetControlToolActivationRequestResponse */
 export interface SetControlToolActivationRequestResponse {
-    /** StreamBody|xs:base64Binary */
-    SetControlToolActivationRequestResult?: string;
+    /** SetControlToolActivationRequestResult */
+    SetControlToolActivationRequestResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

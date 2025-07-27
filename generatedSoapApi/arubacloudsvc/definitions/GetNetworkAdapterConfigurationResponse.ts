@@ -1,6 +1,7 @@
+import { GetNetworkAdapterConfigurationResult } from "./GetNetworkAdapterConfigurationResult";
 
 /** GetNetworkAdapterConfigurationResponse */
 export interface GetNetworkAdapterConfigurationResponse {
-    /** StreamBody|xs:base64Binary */
-    GetNetworkAdapterConfigurationResult?: string;
+    /** GetNetworkAdapterConfigurationResult */
+    GetNetworkAdapterConfigurationResult?: GetNetworkAdapterConfigurationResult;
 }

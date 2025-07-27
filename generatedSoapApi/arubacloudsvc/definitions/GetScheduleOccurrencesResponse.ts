@@ -1,6 +1,7 @@
+import { GetScheduleOccurrencesResult } from "./GetScheduleOccurrencesResult";
 
 /** GetScheduleOccurrencesResponse */
 export interface GetScheduleOccurrencesResponse {
-    /** StreamBody|xs:base64Binary */
-    GetScheduleOccurrencesResult?: string;
+    /** GetScheduleOccurrencesResult */
+    GetScheduleOccurrencesResult?: GetScheduleOccurrencesResult;
 }

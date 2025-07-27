@@ -1,6 +1,7 @@
+import { GetPurchasedAdditionalServicesResult } from "./GetPurchasedAdditionalServicesResult";
 
 /** GetPurchasedAdditionalServicesResponse */
 export interface GetPurchasedAdditionalServicesResponse {
-    /** StreamBody|xs:base64Binary */
-    GetPurchasedAdditionalServicesResult?: string;
+    /** GetPurchasedAdditionalServicesResult */
+    GetPurchasedAdditionalServicesResult?: GetPurchasedAdditionalServicesResult;
 }

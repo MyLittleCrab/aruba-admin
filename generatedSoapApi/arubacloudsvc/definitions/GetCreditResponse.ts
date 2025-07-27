@@ -1,6 +1,7 @@
+import { GetCreditResult } from "./GetCreditResult";
 
 /** GetCreditResponse */
 export interface GetCreditResponse {
-    /** StreamBody|xs:base64Binary */
-    GetCreditResult?: string;
+    /** GetCreditResult */
+    GetCreditResult?: GetCreditResult;
 }

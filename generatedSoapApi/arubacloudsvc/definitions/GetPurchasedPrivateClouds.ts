@@ -1,0 +1,4 @@
+
+/** GetPurchasedPrivateClouds */
+export interface GetPurchasedPrivateClouds {
+}

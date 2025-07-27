@@ -1,16 +1,10 @@
 
 /** GetUserAssistanceRequests */
 export interface GetUserAssistanceRequests {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    dateStart?: string;
-    /** xs:string */
-    dateEnd?: string;
-    /** xs:string */
+    /** xs:dateTime */
+    DateStart?: Date;
+    /** xs:dateTime */
+    DateEnd?: Date;
+    /** AssistanceRequestStatus|xs:string|Waiting,DeliveryError,InCharge,Rejected,Estimated,QuotationExpired,QuotationAccepted,QuotationRefused,Completed,Expired,Draft */
     status?: string;
 }

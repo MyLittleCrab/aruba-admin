@@ -1,6 +1,7 @@
+import { GetAvailablePersonalTemplatesResult } from "./GetAvailablePersonalTemplatesResult";
 
 /** GetAvailablePersonalTemplatesResponse */
 export interface GetAvailablePersonalTemplatesResponse {
-    /** StreamBody|xs:base64Binary */
-    GetAvailablePersonalTemplatesResult?: string;
+    /** GetAvailablePersonalTemplatesResult */
+    GetAvailablePersonalTemplatesResult?: GetAvailablePersonalTemplatesResult;
 }

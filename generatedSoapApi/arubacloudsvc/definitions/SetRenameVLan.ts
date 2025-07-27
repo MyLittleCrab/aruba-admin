@@ -1,14 +1,8 @@
 
 /** SetRenameVLan */
 export interface SetRenameVLan {
+    /** xs:int */
+    vLanResourceId?: number;
     /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    vlanResourceId?: string;
-    /** xs:string */
-    vlanName?: string;
+    vLanName?: string;
 }

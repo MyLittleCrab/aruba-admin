@@ -1,6 +1,7 @@
+import { GetServerDetailsResult } from "./GetServerDetailsResult";
 
 /** GetServerDetailsResponse */
 export interface GetServerDetailsResponse {
-    /** StreamBody|xs:base64Binary */
-    GetServerDetailsResult?: string;
+    /** GetServerDetailsResult */
+    GetServerDetailsResult?: GetServerDetailsResult;
 }

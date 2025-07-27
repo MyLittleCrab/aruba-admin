@@ -1,0 +1,4 @@
+
+/** GetPrivateCloudOrganizations */
+export interface GetPrivateCloudOrganizations {
+}

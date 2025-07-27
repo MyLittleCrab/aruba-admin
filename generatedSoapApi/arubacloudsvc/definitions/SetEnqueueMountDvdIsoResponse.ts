@@ -1,6 +1,7 @@
+import { SetEnqueueLoadBalancerPowerOffResult } from "./SetEnqueueLoadBalancerPowerOffResult";
 
 /** SetEnqueueMountDvdIsoResponse */
 export interface SetEnqueueMountDvdIsoResponse {
-    /** StreamBody|xs:base64Binary */
-    SetEnqueueMountDvdIsoResult?: string;
+    /** SetEnqueueMountDvdIsoResult */
+    SetEnqueueMountDvdIsoResult?: SetEnqueueLoadBalancerPowerOffResult;
 }

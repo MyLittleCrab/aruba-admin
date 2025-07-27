@@ -1,6 +1,7 @@
+import { GetVirtualDatacenterCostResult } from "./GetVirtualDatacenterCostResult";
 
 /** GetVirtualDatacenterCostResponse */
 export interface GetVirtualDatacenterCostResponse {
-    /** StreamBody|xs:base64Binary */
-    GetVirtualDatacenterCostResult?: string;
+    /** GetVirtualDatacenterCostResult */
+    GetVirtualDatacenterCostResult?: GetVirtualDatacenterCostResult;
 }

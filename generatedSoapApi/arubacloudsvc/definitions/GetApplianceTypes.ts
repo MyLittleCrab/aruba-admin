@@ -1,0 +1,4 @@
+
+/** GetApplianceTypes */
+export interface GetApplianceTypes {
+}

@@ -1,14 +1,8 @@
 
 /** SetEnqueueServerSnapshot */
 export interface SetEnqueueServerSnapshot {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    serverId?: string;
-    /** xs:string */
+    /** xs:int */
+    serverId?: number;
+    /** SnapshotOperationTypes|xs:string|Create,Delete,Restore */
     snapshotOperation?: string;
 }

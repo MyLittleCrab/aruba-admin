@@ -1,12 +1,15 @@
+import { Surveyanswers } from "./Surveyanswers";
 
 /** SetEnqueueServerDeletion */
 export interface SetEnqueueServerDeletion {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    serverId?: string;
+    /** xs:int */
+    serverId?: number;
+    /** xs:boolean */
+    removeIP?: boolean;
+    /** xs:boolean */
+    now?: boolean;
+    /** xs:boolean */
+    migrateIP?: boolean;
+    /** surveyanswers */
+    surveyanswers?: Surveyanswers;
 }

@@ -1,12 +1,7 @@
+import { OperationRequest12 } from "./OperationRequest12";
 
 /** SetEnqueueRemoveSharedStorage */
 export interface SetEnqueueRemoveSharedStorage {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    sharedStorageID?: string;
+    /** operationRequest */
+    operationRequest?: OperationRequest12;
 }

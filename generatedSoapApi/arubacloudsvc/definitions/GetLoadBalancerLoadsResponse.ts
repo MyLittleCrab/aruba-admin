@@ -1,6 +1,7 @@
+import { GetLoadBalancerLoadsResult } from "./GetLoadBalancerLoadsResult";
 
 /** GetLoadBalancerLoadsResponse */
 export interface GetLoadBalancerLoadsResponse {
-    /** StreamBody|xs:base64Binary */
-    GetLoadBalancerLoadsResult?: string;
+    /** GetLoadBalancerLoadsResult */
+    GetLoadBalancerLoadsResult?: GetLoadBalancerLoadsResult;
 }

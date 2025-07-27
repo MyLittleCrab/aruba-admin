@@ -1,14 +1,8 @@
 
 /** GetControlToolCommandResult */
 export interface GetControlToolCommandResult {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    serverId?: string;
+    /** xs:int */
+    serverID?: number;
     /** xs:string */
     command?: string;
 }

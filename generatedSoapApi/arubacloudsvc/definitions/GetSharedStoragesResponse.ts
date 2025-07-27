@@ -1,6 +1,7 @@
+import { GetSharedStoragesResult } from "./GetSharedStoragesResult";
 
 /** GetSharedStoragesResponse */
 export interface GetSharedStoragesResponse {
-    /** StreamBody|xs:base64Binary */
-    GetSharedStoragesResult?: string;
+    /** GetSharedStoragesResult */
+    GetSharedStoragesResult?: GetSharedStoragesResult;
 }

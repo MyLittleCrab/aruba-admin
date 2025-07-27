@@ -1,6 +1,7 @@
+import { GetUserAssistanceRequestsResult } from "./GetUserAssistanceRequestsResult";
 
 /** GetUserAssistanceRequestsResponse */
 export interface GetUserAssistanceRequestsResponse {
-    /** StreamBody|xs:base64Binary */
-    GetUserAssistanceRequestsResult?: string;
+    /** GetUserAssistanceRequestsResult */
+    GetUserAssistanceRequestsResult?: GetUserAssistanceRequestsResult;
 }

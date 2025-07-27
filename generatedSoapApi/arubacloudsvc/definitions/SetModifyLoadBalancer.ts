@@ -1,16 +1,7 @@
+import { Request6 } from "./Request6";
 
 /** SetModifyLoadBalancer */
 export interface SetModifyLoadBalancer {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
-    /** xs:string */
-    loadBalancerID?: string;
-    /** xs:string */
-    name?: string;
-    /** xs:string */
-    healthCheckNotification?: string;
+    /** request */
+    request?: Request6;
 }

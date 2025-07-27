@@ -1,6 +1,7 @@
+import { GetIsosResult } from "./GetIsosResult";
 
 /** GetIsosResponse */
 export interface GetIsosResponse {
-    /** StreamBody|xs:base64Binary */
-    GetIsosResult?: string;
+    /** GetIsosResult */
+    GetIsosResult?: GetIsosResult;
 }

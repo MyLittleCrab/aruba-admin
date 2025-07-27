@@ -1,6 +1,7 @@
+import { GetAllCloudIpAddressesResult } from "./GetAllCloudIpAddressesResult";
 
 /** GetAllCloudIpAddressesResponse */
 export interface GetAllCloudIpAddressesResponse {
-    /** StreamBody|xs:base64Binary */
-    GetAllCloudIpAddressesResult?: string;
+    /** GetAllCloudIpAddressesResult */
+    GetAllCloudIpAddressesResult?: GetAllCloudIpAddressesResult;
 }

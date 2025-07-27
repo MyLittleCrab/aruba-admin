@@ -1,6 +1,7 @@
+import { GetPurchasedFtpResult } from "./GetPurchasedFtpResult";
 
 /** GetPurchasedFTPResponse */
 export interface GetPurchasedFtpResponse1 {
-    /** StreamBody|xs:base64Binary */
-    GetPurchasedFTPResult?: string;
+    /** GetPurchasedFTPResult */
+    GetPurchasedFTPResult?: GetPurchasedFtpResult;
 }

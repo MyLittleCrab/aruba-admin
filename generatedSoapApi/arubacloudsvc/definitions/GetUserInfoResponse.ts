@@ -1,6 +1,7 @@
+import { GetUserInfoResult } from "./GetUserInfoResult";
 
 /** GetUserInfoResponse */
 export interface GetUserInfoResponse {
-    /** StreamBody|xs:base64Binary */
-    GetUserInfoResult?: string;
+    /** GetUserInfoResult */
+    GetUserInfoResult?: GetUserInfoResult;
 }

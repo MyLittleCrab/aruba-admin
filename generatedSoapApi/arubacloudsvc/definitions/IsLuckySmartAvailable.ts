@@ -1,0 +1,4 @@
+
+/** IsLuckySmartAvailable */
+export interface IsLuckySmartAvailable {
+}

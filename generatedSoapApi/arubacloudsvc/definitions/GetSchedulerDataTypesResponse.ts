@@ -1,6 +1,7 @@
+import { GetSchedulerDataTypesResult } from "./GetSchedulerDataTypesResult";
 
 /** GetSchedulerDataTypesResponse */
 export interface GetSchedulerDataTypesResponse {
-    /** StreamBody|xs:base64Binary */
-    GetSchedulerDataTypesResult?: string;
+    /** GetSchedulerDataTypesResult */
+    GetSchedulerDataTypesResult?: GetSchedulerDataTypesResult;
 }

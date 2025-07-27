@@ -1,0 +1,14 @@
+
+/**
+ * UserPrivateVLAN
+ * @targetNSAlias `tns`
+ * @targetNamespace `http://schemas.datacontract.org/2004/07/Aruba.Cloud.Provisioning.Entities.SharedStorage`
+ */
+export interface UserPrivateVlan {
+    /** xs:string */
+    Name?: string;
+    /** xs:int */
+    UserPrivateVLANID?: number;
+    /** xs:string */
+    VlanCode?: string;
+}

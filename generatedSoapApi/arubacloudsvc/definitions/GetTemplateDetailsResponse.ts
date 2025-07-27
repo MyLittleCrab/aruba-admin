@@ -1,6 +1,7 @@
+import { GetTemplateDetailsResult } from "./GetTemplateDetailsResult";
 
 /** GetTemplateDetailsResponse */
 export interface GetTemplateDetailsResponse {
-    /** StreamBody|xs:base64Binary */
-    GetTemplateDetailsResult?: string;
+    /** GetTemplateDetailsResult */
+    GetTemplateDetailsResult?: GetTemplateDetailsResult;
 }

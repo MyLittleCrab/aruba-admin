@@ -1,10 +1,10 @@
+import { Pagination } from "./Pagination";
+import { Sorting } from "./Sorting";
 
 /** GetSharedStorages */
 export interface GetSharedStorages {
-    /** xs:string */
-    jsonp?: string;
-    /** xs:string */
-    userName?: string;
-    /** xs:string */
-    token?: string;
+    /** pagination */
+    pagination?: Pagination;
+    /** sorting */
+    sorting?: Sorting;
 }

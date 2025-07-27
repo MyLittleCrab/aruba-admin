@@ -1,6 +1,7 @@
+import { GetCompanyByUrlResult } from "./GetCompanyByUrlResult";
 
 /** GetCompanyByUrlResponse */
 export interface GetCompanyByUrlResponse {
-    /** StreamBody|xs:base64Binary */
-    GetCompanyByUrlResult?: string;
+    /** GetCompanyByUrlResult */
+    GetCompanyByUrlResult?: GetCompanyByUrlResult;
 }
