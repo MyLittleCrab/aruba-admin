@@ -1,0 +1,4 @@
+
+/** IWsEndUser_PlannedChangePrivateCloudLicenseDeletion_OutputMessage */
+export interface IWsEndUserPlannedChangePrivateCloudLicenseDeletionOutputMessage {
+}

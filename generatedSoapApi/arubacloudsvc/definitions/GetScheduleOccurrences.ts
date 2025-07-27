@@ -1,0 +1,14 @@
+
+/** GetScheduleOccurrences */
+export interface GetScheduleOccurrences {
+    /** xs:string */
+    jsonp?: string;
+    /** xs:string */
+    userName?: string;
+    /** xs:string */
+    token?: string;
+    /** xs:string */
+    scheduleStartDate?: string;
+    /** xs:string */
+    scheduleEndDate?: string;
+}

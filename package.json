@@ -1,0 +1,24 @@
+{
+  "name": "arubaupdater",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "downloadWSDL": "curl https://api.dc1.computing.cloud.it/WsEndUser/v2.9/WsEndUser.svc?wsdl -o ./generatedSoapApi/Arubacloud.svc.wsdl",
+    "regenerateSoapApi": "wsdl-tsclient ./generatedSoapApi/Arubacloud.svc.wsdl -o ./generatedSoapApi",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roman A. Nosov (github: myLittleCrab)",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "fast-xml-parser": "^5.2.5",
+    "ts-node": "^10.9.2",
+    "wsdl-tsclient": "^1.7.1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "soap": "^1.2.1"
+  }
+}

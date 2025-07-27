@@ -1,0 +1,16 @@
+
+/** SetEnqueueAssociateIpAddress */
+export interface SetEnqueueAssociateIpAddress {
+    /** xs:string */
+    jsonp?: string;
+    /** xs:string */
+    userName?: string;
+    /** xs:string */
+    token?: string;
+    /** xs:string */
+    ipAddressResourceId?: string;
+    /** xs:string */
+    networkAdapterId?: string;
+    /** xs:string */
+    setIPOnVirtualMachine?: string;
+}
