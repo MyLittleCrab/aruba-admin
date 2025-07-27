@@ -7,7 +7,7 @@
   "description": "A TypeScript/Node.js library for interacting with Aruba Cloud's SOAP API with full type support and multi-region connectivity.",
   "scripts": {
     "build": "tsc",
-    "postbuild": "\\cp -f ./generatedSoapApi/*.wsdl ./dist/generatedSoapApi/",
+    "postbuild": "cp -f ./generatedSoapApi/*.wsdl ./dist/generatedSoapApi/",
     "clean": "rm -rf dist",
     "rebuild": "npm run clean && npm run build",
     "generateSoapApi": "ts-node lib/utils/SoapClientBuilder.ts",
