@@ -7,6 +7,10 @@
     "module": "commonjs",                                /* Specify what module code is generated. */
 /* JavaScript Support */
 /* Emit */
+    "outDir": "./dist",                                  /* Specify an output folder for all emitted files. */
+    "rootDir": "./",                                     /* Specify the root folder within your source files. */
+    "declaration": true,                                 /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    "sourceMap": true,                                   /* Create source map files for emitted JavaScript files. */
 /* Interop Constraints */
 "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
 "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
@@ -14,5 +18,9 @@
     "strict": true,                                      /* Enable all strict type-checking options. */
 /* Completeness */
 "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  }
+  },
+  "exclude": [
+    "examples/**/*",
+    "node_modules/**/*"
+  ]
 }

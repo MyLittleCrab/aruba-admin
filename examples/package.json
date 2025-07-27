@@ -1,0 +1,22 @@
+{
+  "name": "aruba-admin-examples",
+  "version": "1.0.0",
+  "description": "Examples for Aruba Admin library",
+  "private": true,
+  "scripts": {
+    "example:servers-list": "ts-node GetServersList.ts",
+    "example:account-credit": "ts-node GetAccountCredit.ts", 
+    "example:create-vm": "ts-node CreateVirtualMachine.ts",
+    "example:templates": "ts-node GetAvailableTemplates.ts",
+    "example:hypervisor-types": "ts-node GetHypervisorTypes.ts",
+    "example:multi-datacenter": "ts-node MultiDataCenterExample.ts",
+    "example:error-handling": "ts-node ErrorHandlingExample.ts",
+    "run-all-safe": "npm run example:servers-list && npm run example:account-credit && npm run example:templates && npm run example:hypervisor-types && npm run example:error-handling",
+    "run-all-readonly": "npm run example:servers-list && npm run example:account-credit && npm run example:templates && npm run example:hypervisor-types && npm run example:multi-datacenter"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5"
+  }
+} 
