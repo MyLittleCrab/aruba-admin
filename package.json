@@ -1,23 +1,41 @@
 {
-  "name": "arubaupdater",
-  "version": "1.0.0",
+  "name": "aruba-admin",
+  "version": "0.0.1",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "generateSoapApi": "ts-node src/utils/SoapClientBuilder.ts",
+    "start": "ts-node lib/index.ts",
+    "generateSoapApi": "ts-node lib/utils/SoapClientBuilder.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Roman A. Nosov (github: myLittleCrab)",
-  "license": "ISC",
   "description": "",
   "devDependencies": {
-    "ts-node": "^10.9.2",
+    "ts-node": "^10.9.2"
+  },
+    "keywords": [
+    "aruba",
+    "aruba admin",
+    "aruba cloud",
+    "aruba cloud admin",
+    "aruba cloud api",
+    "aruba cloud api admin",
+    "aruba cloud api client",
+    "aruba cloud api client admin",
+    "aruba cloud api client typescript",
+    "aruba cloud api client ts",
+    "aruba cloud api client typescript admin",
+    "aruba cloud api client ts admin"
+  ],
+  "readmeFilename": "README.md",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "soap": "^1.2.1" ,
     "wsdl-tsclient": "^1.7.1",
     "xml-js": "^1.6.11"
   },
-  "dependencies": {
-    "dotenv": "^17.2.1",
-    "soap": "^1.2.1"
+  "engines": {
+    "node": ">=12"
   }
 }

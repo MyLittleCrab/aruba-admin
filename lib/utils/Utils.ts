@@ -75,3 +75,16 @@ export const generateTypescriptApi = async (): Promise<void> => {
     });
 
 }
+
+/**
+ *  Downloads WSDL files for all specified data centers except the default one.
+ * @param dataCenters Array of DataCenter objects to download WSDLs for
+ * @returns {Promise<void>} A promise that resolves when all WSDLs are downloaded
+ */
+export const downloadWSDLs = async (dataCenters: DataCenter[]): Promise<void> => {
+    console.log(`Downloading WSDLs for ${dataCenters.length} data centers...`);
+    for (const dc of dataCenters) {
+        await downloadWSDL(dc);
+        console.log(`WSDL for ${dc.name} downloaded successfully.`);
+    }
+}
