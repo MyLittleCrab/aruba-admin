@@ -5,7 +5,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "generateSoapApi": "ts-node src/BuildSoapClient.ts",
+    "generateSoapApi": "ts-node src/utils/SoapClientBuilder.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Roman A. Nosov (github: myLittleCrab)",
