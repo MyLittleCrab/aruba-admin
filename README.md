@@ -240,7 +240,7 @@ This is an unofficial library for Aruba Cloud API. It is not affiliated with or 
 
 ## Support
 
-- 📚 [Aruba Cloud Documentation](https://www.cloud.it/en/support-community/)
+- 📚 [Official Aruba Api Documentation](https://docs.computing.cloud.it/api/WsEndUser/v2.9/html/Methods_T_Aruba_Cloud_WsEndUser_IWsEndUser.htm)
 - 🐛 [Report Issues](https://github.com/myLittleCrab/aruba-admin/issues)
 - 💬 [Discussions](https://github.com/myLittleCrab/aruba-admin/discussions)
 
