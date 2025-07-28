@@ -1,5 +1,4 @@
 import { DataCenter } from "./constants";
-import constants from "./constants";
 import { createClientAsync as ArubaClient } from "../generatedSoapApi/arubacloudsvc";
 import { downloadWSDL } from "./utils/Utils";
 import { WSSecurity } from "soap";
@@ -9,9 +8,6 @@ export type ArubaAdminOptions = {
     password: string;
     dataCenter: DataCenter;
 }
-
-export { DataCenter };
-export { constants as DataCenters };
 
 export const createArubaAdmin = async (options: ArubaAdminOptions) => {
     const client = await ArubaClient(await downloadWSDL(options.dataCenter));

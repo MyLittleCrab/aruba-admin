@@ -2,7 +2,7 @@
 import xmlConverter from "xml-js";
 import fs from "fs/promises"
 import path from "path";
-import constants, { DataCenter } from "../constants";
+import constants, { DataCenter, DATA_CENTERS } from "../constants";
 
 import { parseAndGenerate } from "wsdl-tsclient";
 
@@ -88,7 +88,7 @@ export const generateTypescriptApi = async (): Promise<void> => {
     
     await fs.mkdir(constants.GENERATED_SOAP_API_DIR, { recursive: true });
 
-    await downloadWSDL(constants.DATA_CENTERS.DEFAULT);
+    await downloadWSDL(DATA_CENTERS.DEFAULT);
 
     // Generate TypeScript API from WSDL
     await parseAndGenerate(constants.WSDL_LOCATION, constants.GENERATED_SOAP_API_DIR, {

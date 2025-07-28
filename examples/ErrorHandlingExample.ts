@@ -1,8 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import constants from "../lib/constants";
-import ArubaAdmin from "../lib/ArubaAdmin";
+import { createArubaAdmin, DATA_CENTERS } from "../lib/index";
 
 const username = process.env.ARUBA_USERNAME || "your_username";
 const password = process.env.ARUBA_PASSWORD || "your_password";
@@ -10,10 +9,10 @@ const password = process.env.ARUBA_PASSWORD || "your_password";
 (async () => {
     
     try {
-        const client = await ArubaAdmin({
+        const client = await createArubaAdmin({
             username,
             password,
-            dataCenter: constants.DATA_CENTERS.GERMANY
+            dataCenter: DATA_CENTERS.GERMANY
         });
         
         const result = await client.GetServersListAsync({

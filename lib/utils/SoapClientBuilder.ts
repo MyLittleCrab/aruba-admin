@@ -1,5 +1,5 @@
 import { downloadWSDLs, generateTypescriptApi } from "./Utils";
-import constants, { DataCenter } from "../constants";
+import { DataCenter, DATA_CENTERS } from "../constants";
 
 (async ()  => {
 
@@ -7,7 +7,7 @@ import constants, { DataCenter } from "../constants";
 
     // Download WSDLs for all data centers except the default one
     const dataCenters: DataCenter[] = 
-        Object.values(constants.DATA_CENTERS).filter(dc => dc.name !== constants.DATA_CENTERS.DEFAULT.name);
+        Object.values(DATA_CENTERS).filter(dc => dc.name !== DATA_CENTERS.DEFAULT.name);
 
     await downloadWSDLs(dataCenters);
 

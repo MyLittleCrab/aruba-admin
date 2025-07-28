@@ -111,6 +111,32 @@ Checking servers across 5 data centers...
    1. backup-server (Running)
 ```
 
+## Basic Usage Pattern
+
+All examples follow this basic pattern:
+
+```typescript
+import dotenv from "dotenv";
+dotenv.config();
+
+import { createArubaAdmin, DATA_CENTERS } from "../lib/index";
+
+const username = process.env.ARUBA_USERNAME || "your_username";
+const password = process.env.ARUBA_PASSWORD || "your_password";
+
+(async () => {
+    const client = await createArubaAdmin({
+        username,
+        password,
+        dataCenter: DATA_CENTERS.ITALY1 // or any other data center
+    });
+
+    // Your API calls here
+    const result = await client.SomeMethodAsync({...});
+    
+})().catch(console.error);
+```
+
 ## Tips
 
 1. **Start with basic examples** like `GetServersList.ts` to test your credentials

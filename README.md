@@ -48,13 +48,12 @@ ARUBA_PASSWORD=your_password
 ### 2. Basic Usage
 
 ```typescript
-import ArubaAdmin from 'aruba-admin';
-import constants from 'aruba-admin/lib/constants';
+import { createArubaAdmin, DATA_CENTERS } from 'aruba-admin';
 
-const client = await ArubaAdmin({
+const client = await createArubaAdmin({
     username: process.env.ARUBA_USERNAME!,
     password: process.env.ARUBA_PASSWORD!,
-    dataCenter: constants.DATA_CENTERS.ITALY1
+    dataCenter: DATA_CENTERS.ITALY1
 });
 
 // Get list of servers
@@ -67,7 +66,7 @@ console.log(result[0].GetServersListResult?.Value);
 
 ## API Reference
 
-### ArubaAdmin(options)
+### createArubaAdmin(options)
 
 Creates an authenticated SOAP client for Aruba Cloud API.
 
@@ -85,18 +84,18 @@ Promise<ArubaSoapClient> - Authenticated SOAP client with all API methods
 ### Data Centers
 
 ```typescript
-import constants from 'aruba-admin/lib/constants';
+import { DATA_CENTERS } from 'aruba-admin';
 
 // Available data centers
-constants.DATA_CENTERS.ITALY1    // Italy DC1
-constants.DATA_CENTERS.ITALY2    // Italy DC2  
-constants.DATA_CENTERS.ITALY3    // Italy DC3
-constants.DATA_CENTERS.CZECH     // Czech Republic
-constants.DATA_CENTERS.FRANCE    // France
-constants.DATA_CENTERS.GERMANY   // Germany
-constants.DATA_CENTERS.UK        // United Kingdom
-constants.DATA_CENTERS.POLAND    // Poland
-constants.DATA_CENTERS.DEFAULT   // Default (Italy DC1)
+DATA_CENTERS.ITALY1    // Italy DC1
+DATA_CENTERS.ITALY2    // Italy DC2  
+DATA_CENTERS.ITALY3    // Italy DC3
+DATA_CENTERS.CZECH     // Czech Republic
+DATA_CENTERS.FRANCE    // France
+DATA_CENTERS.GERMANY   // Germany
+DATA_CENTERS.UK        // United Kingdom
+DATA_CENTERS.POLAND    // Poland
+DATA_CENTERS.DEFAULT   // Default (Italy DC1)
 ```
 
 ## Examples
@@ -105,15 +104,14 @@ constants.DATA_CENTERS.DEFAULT   // Default (Italy DC1)
 
 ```typescript
 import dotenv from 'dotenv';
-import ArubaAdmin from 'aruba-admin';
-import constants from 'aruba-admin/lib/constants';
+import { createArubaAdmin, DATA_CENTERS } from 'aruba-admin';
 
 dotenv.config();
 
-const client = await ArubaAdmin({
+const client = await createArubaAdmin({
     username: process.env.ARUBA_USERNAME!,
     password: process.env.ARUBA_PASSWORD!,
-    dataCenter: constants.DATA_CENTERS.CZECH
+    dataCenter: DATA_CENTERS.CZECH
 });
 
 const response = await client.GetServersListAsync({ 
@@ -173,10 +171,10 @@ if (templatesResponse[0].GetHypervisorTemplatesResult?.Success) {
 
 ```typescript
 try {
-    const client = await ArubaAdmin({
+    const client = await createArubaAdmin({
         username: process.env.ARUBA_USERNAME!,
         password: process.env.ARUBA_PASSWORD!,
-        dataCenter: constants.DATA_CENTERS.GERMANY
+        dataCenter: DATA_CENTERS.GERMANY
     });
     
     const result = await client.GetServersListAsync({

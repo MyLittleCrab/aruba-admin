@@ -8,8 +8,7 @@ export type DataCenter = {
 // Get the directory of this constants file to build absolute paths
 const LIBRARY_ROOT = path.resolve(__dirname, '..');
 
-export default {
-    DATA_CENTERS: {
+export const DATA_CENTERS: Record<string, DataCenter> = Object.freeze({
         DEFAULT: {
             url: "https://api.dc1.computing.cloud.it/WsEndUser/v2.9/WsEndUser.svc?wsdl",
             name: "Arubacloud.svc"
@@ -46,8 +45,9 @@ export default {
             url: "https://api.dc8.computing.cloud.it/WsEndUser/v2.9/WsEndUser.svc?wsdl",
             name: "Poland"
         } as DataCenter,
-    },
+});
 
+export default {
     // Use absolute paths relative to the library installation
     WSDL_LOCATION: path.join(LIBRARY_ROOT, "generatedSoapApi", "Arubacloud.svc.wsdl"),
     GENERATED_SOAP_API_DIR: path.join(LIBRARY_ROOT, "generatedSoapApi"),

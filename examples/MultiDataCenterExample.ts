@@ -1,8 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import constants from "../lib/constants";
-import ArubaAdmin from "../lib/ArubaAdmin";
+import { createArubaAdmin, DATA_CENTERS } from "../lib/index";
 
 const username = process.env.ARUBA_USERNAME || "your_username";
 const password = process.env.ARUBA_PASSWORD || "your_password";
@@ -11,11 +10,11 @@ const password = process.env.ARUBA_PASSWORD || "your_password";
    
     // List of data centers to check
     const dataCenters = [
-        constants.DATA_CENTERS.ITALY1,
-        constants.DATA_CENTERS.ITALY2,
-        constants.DATA_CENTERS.CZECH,
-        constants.DATA_CENTERS.GERMANY,
-        constants.DATA_CENTERS.UK
+        DATA_CENTERS.ITALY1,
+        DATA_CENTERS.ITALY2,
+        DATA_CENTERS.CZECH,
+        DATA_CENTERS.GERMANY,
+        DATA_CENTERS.UK
     ];
 
     console.log(`Checking servers across ${dataCenters.length} data centers...\n`);
@@ -24,7 +23,7 @@ const password = process.env.ARUBA_PASSWORD || "your_password";
         try {
             console.log(`🌍 Connecting to ${dataCenter.name} (${dataCenter.url})`);
             
-            const client = await ArubaAdmin({
+            const client = await createArubaAdmin({
                 username,
                 password,
                 dataCenter
