@@ -8,7 +8,7 @@ export type DataCenter = {
 // Get the directory of this constants file to build absolute paths
 const LIBRARY_ROOT = path.resolve(__dirname, '..');
 
-export const DATA_CENTERS: Record<string, DataCenter> = Object.freeze({
+export const DATA_CENTERS = Object.freeze({
         DEFAULT: {
             url: "https://api.dc1.computing.cloud.it/WsEndUser/v2.9/WsEndUser.svc?wsdl",
             name: "Arubacloud.svc"
