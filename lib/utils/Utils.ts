@@ -4,8 +4,6 @@ import fs from "fs/promises"
 import path from "path";
 import constants, { DataCenter, DATA_CENTERS } from "../constants";
 
-import { parseAndGenerate } from "wsdl-tsclient";
-
 /**
  * Downloads the WSDL file for the specified data center and returns the path to it.
  * First tries to use pre-packaged WSDL files, only downloads if not found.
@@ -90,6 +88,7 @@ export const generateTypescriptApi = async (): Promise<void> => {
 
     await downloadWSDL(DATA_CENTERS.DEFAULT);
 
+    const parseAndGenerate = require("wsdl-tsclient").parseAndGenerate;
     // Generate TypeScript API from WSDL
     await parseAndGenerate(constants.WSDL_LOCATION, constants.GENERATED_SOAP_API_DIR, {
         caseInsensitiveNames: true,

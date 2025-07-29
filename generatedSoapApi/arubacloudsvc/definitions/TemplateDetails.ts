@@ -38,7 +38,7 @@ export interface TemplateDetails {
     Ipv6Compatible?: boolean;
     /** xs:string */
     Name?: string;
-    /** OSFamilyTypes|xs:string|WindowsServer2003,WindowsServer2008,Debian,Ubuntu,CentOS,BSD,Custom,openSuse,Other,WindowsServer2012,WindowsServer2016,WindowsServer2019,AlmaLinux,WindowsServer2022 */
+    /** OSFamilyTypes|xs:string|WindowsServer2003,WindowsServer2008,Debian,Ubuntu,CentOS,BSD,Custom,openSuse,Other,WindowsServer2012,WindowsServer2016,WindowsServer2019,AlmaLinux,WindowsServer2022,WindowsServer2025 */
     OSFamily?: string;
     /** xs:string */
     OSVersion?: string;
