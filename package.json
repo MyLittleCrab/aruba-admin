@@ -1,6 +1,6 @@
 {
   "name": "aruba-admin",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
   "type": "commonjs",
@@ -45,12 +45,12 @@
   ],
   "dependencies": {
     "soap": "^1.2.1",
-    "wsdl-tsclient": "^1.7.1",
     "xml-js": "^1.6.11"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "wsdl-tsclient": "^1.7.1"
   },
   "engines": {
     "node": ">=12"
